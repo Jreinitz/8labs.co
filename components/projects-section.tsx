@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import Image from "next/image"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -15,6 +16,7 @@ const projects = [
       "Automated content generation and marketing empire builder. Users sign up, pick a niche, and we handle the rest—automating content creation across Facebook, Instagram, TikTok, and YouTube.",
     status: "In Development",
     span: "col-span-2 row-span-2",
+    logo: "/affilify-logo.svg",
   },
   {
     title: "Unifyed",
@@ -23,6 +25,7 @@ const projects = [
       "Multi-platform live shopping solution enabling concurrent streaming across Instagram, TikTok, Twitch, Poshmark, and more.",
     status: "Active",
     span: "col-span-2 row-span-1",
+    logo: "/unifyed-logo.svg",
   },
   {
     title: "Ageos",
@@ -116,6 +119,7 @@ function ProjectCard({
     description: string
     status: string
     span: string
+    logo?: string
   }
   index: number
 }) {
@@ -168,6 +172,17 @@ function ProjectCard({
         >
           {project.title}
         </h3>
+        {project.logo && (
+          <div className="mt-3 opacity-60">
+            <Image
+              src={project.logo || "/placeholder.svg"}
+              alt={`${project.title} logo`}
+              width={40}
+              height={45}
+              className="object-contain"
+            />
+          </div>
+        )}
       </div>
 
       {/* Description - reveals on hover */}

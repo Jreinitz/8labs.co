@@ -85,7 +85,7 @@ export function ContactSection() {
             solutions that will define your future.
           </p>
           <a
-            href="mailto:hello@8labs.io"
+            href="mailto:hello@8labs.co"
             className="group inline-flex items-center gap-3 border border-foreground px-8 py-4 font-mono text-sm uppercase tracking-widest text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
           >
             <ScrambleTextOnHover text="Start a Conversation" as="span" duration={0.6} />
@@ -111,10 +111,10 @@ export function ContactSection() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:hello@8labs.io"
+                  href="mailto:hello@8labs.co"
                   className="font-mono text-xs text-foreground/80 hover:text-foreground transition-colors duration-200"
                 >
-                  hello@8labs.io
+                  hello@8labs.co
                 </a>
               </li>
               <li>

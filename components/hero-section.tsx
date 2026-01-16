@@ -5,7 +5,6 @@ import { ScrambleTextOnHover } from "@/components/scramble-text"
 import { SplitFlapText, SplitFlapMuteToggle, SplitFlapAudioProvider } from "@/components/split-flap-text"
 import { AnimatedNoise } from "@/components/animated-noise"
 import { BitmapChevron } from "@/components/bitmap-chevron"
-import Image from "next/image"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -35,12 +34,12 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="hero" className="relative min-h-screen flex flex-col pl-6 md:pl-28 pr-6 md:pr-12">
+    <section
+      ref={sectionRef}
+      id="hero"
+      className="relative min-h-screen flex flex-col pl-6 md:pl-28 pr-6 md:pr-12 pt-24 md:pt-28"
+    >
       <AnimatedNoise opacity={0.02} />
-
-      <div className="pt-8 md:pt-12">
-        <Image src="/8labs-logo.svg" alt="8 Labs" width={180} height={90} className="h-auto w-32 md:w-44" priority />
-      </div>
 
       {/* Main content - now vertically centered in remaining space */}
       <div ref={contentRef} className="flex-1 flex flex-col justify-center w-full max-w-6xl">

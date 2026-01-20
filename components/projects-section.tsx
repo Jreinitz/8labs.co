@@ -17,6 +17,7 @@ const projects = [
     status: "In Development",
     span: "col-span-2 row-span-2",
     logo: "/affilify-logo.svg",
+    url: "https://affilify.co",
   },
   {
     title: "Unifyed",
@@ -26,6 +27,7 @@ const projects = [
     status: "Active",
     span: "col-span-2 row-span-1",
     logo: "/unifyed-logo.svg",
+    url: "https://unifyed.io",
   },
   {
     title: "Ageos",
@@ -120,6 +122,7 @@ function ProjectCard({
     status: string
     span: string
     logo?: string
+    url?: string
   }
   index: number
 }) {
@@ -130,9 +133,9 @@ function ProjectCard({
     <article
       ref={cardRef}
       className={cn(
-        "group relative border border-border/40 p-6 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden",
+        "group relative border border-border/40 p-6 flex flex-col justify-between transition-all duration-500 cursor-pointer",
         project.span,
-        isHovered && "border-foreground/60",
+        isHovered ? "border-foreground/60 z-20 overflow-visible" : "z-10 overflow-hidden",
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -195,6 +198,23 @@ function ProjectCard({
         >
           {project.description}
         </p>
+        {project.url && (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              "inline-flex items-center gap-2 mt-4 font-mono text-[10px] uppercase tracking-widest text-foreground border border-foreground/40 px-3 py-2 transition-all duration-300 hover:bg-foreground hover:text-background",
+              isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2",
+            )}
+            onClick={(e) => e.stopPropagation()}
+          >
+            Visit Site
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="transition-transform group-hover:translate-x-0.5">
+              <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </a>
+        )}
       </div>
 
       {/* Index marker */}

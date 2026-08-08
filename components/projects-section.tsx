@@ -10,12 +10,22 @@ gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
+    title: "TestWell",
+    category: "AI Testing Platform",
+    description:
+      "Intelligent testing platform that automates quality assurance workflows. Leverage AI to write, maintain, and execute tests with unprecedented efficiency and coverage.",
+    status: "Active",
+    span: "col-span-2 row-span-2",
+    logo: "/testwell-logo.svg",
+    url: "https://www.test-well.com",
+  },
+  {
     title: "Affilify",
     category: "Marketing Automation",
     description:
       "Automated content generation and marketing empire builder. Users sign up, pick a niche, and we handle the rest—automating content creation across Facebook, Instagram, TikTok, and YouTube.",
     status: "In Development",
-    span: "col-span-2 row-span-2",
+    span: "col-span-2 row-span-1",
     logo: "/affilify-logo.svg",
     url: "https://affilify.co",
   },

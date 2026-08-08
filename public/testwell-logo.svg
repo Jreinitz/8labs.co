@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;display=swap');
+    .logo-text { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.025em; }
+  </style>
+  <text class="logo-text" x="0" y="30">
+    <tspan fill="#FAFAFA">Test</tspan><tspan fill="#0d9488">Well</tspan>
+  </text>
+</svg>
